@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicko Chamorro</title>
+    <link rel="stylesheet" href="./cs/style.css">  
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> 
+    <script src="https://unpkg.com/split-type"></script> 
+</head>
+<body class="is-loading" >
+
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-1 bar"></div>
+            <!-- <div class="loader-2 bar"></div> -->
+        </div>
+        <div class="counter">
+            <div class="counter-1 digit">
+                <div class="num">0</div>
+                <div class="num num1offset1">1</div> <!--  -->
+            </div>
+            <div class="counter-2 digit">
+                <div class="num">0</div>
+                <div class="num num1offset2">1</div> <!--  -->
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num">0</div>
+            </div>
+            <div class="counter-3 digit">
+                <div class="num">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cursor"></div>
+
+    <!-- hamburger -->
+    <input type="checkbox" id="navi-toggle" class="checkbox">
+    <label for="navi-toggle" class="button">
+        <!-- <span class="icon">&nbsp;</span> -->
+        <!-- <i class="fa-solid fa-book" ></i> -->
+        <!-- <div class="button__text">MENU</div> -->
+        <!-- <div class="button__box"> --> 
+            <svg xmLns="http://www.w3.org/2000/svg" xmL:Lang="en" 
+                xmLns:xLink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+<!--                 <title>Circular Text Path</title> -->
+                <defs>
+                    <path id="textcircle" d="M250,400a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
+                        tranform="rotate(12,250,250)"/>
+                </defs>
+                <g>
+                    <text textlength="940">
+                        <textpath 
+                            xlink:href="#textcircle"
+                            arial-label="MENU ♦ MENU ♦"
+                            textlength="940">MENU&nbsp;♦&nbsp;MENU&nbsp;♦&nbsp;</textpath> <!-- &#160; -->
+                    </text>
+                </g>
+            </svg>
+        <!-- </div> -->
+    </label>
+    <div class="imageIcon">
+        <div class="icon__imageBox">
+            <img class="icon__img" src="../img/Profile-pic_BlackAndWhite_Cuadrada-SinFondo.png" alt="My photo">
+        </div>
+        <!-- <div class="icon__background"></div> -->
+        <svg class="icon__svg">
+            <filter id="noise">
+                <feTurbulence id="turbulence">
+                    <animate attributeName="baseFrequency" dur="50s" values="0.9 0.9;0.8 0.8;0.9 0.9;" repeatCount="indefinite"></animate>
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" scale="60"></feDisplacementMap>
+            </filter>
+        </svg> 
+    </div>
+
+    <!-- nav -->
+    <div class="background">&nbsp;</div>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link" data-text="Home Home Home Home Home">Home</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" data-text="About Me About Me About Me About Me">About Me</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" data-text="Portfolio Portfolio Portfolio Portfolio">Portfolio</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" data-text="Contact Contact Contact Contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="section sectionContainerBarba" id="FirstScroll">
+        <div class="container container__initial" id="Initial">
+            <model-viewer 
+                id="Sunglasses"
+                alt="Sunglasses" 
+                src="models/uploads_files_2851131_Sunglasses.glb" ar
+                shadow-intensity="1" 
+                exposure="1"
+                camera-orbit="0deg 90deg 100%"
+                generate-schema>
+            </model-viewer>
+            <div class="wrapper">
+                <p class="arrow__text">Scroll</p>
+                <div class="arrow__wrapper">
+                    <div class="circle"></div>
+                    <div class="circle circle-2"></div>
+                    <div class="arrow">
+                        <div class="arrow_line"></div>
+                        <div class="arrow_tip-wrapper">
+                            <div class="arrow_tip left"></div>
+                            <div class="arrow_tip right"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>        
+        <header class="container container__presentation" id="Home">   
+            <div class="home">
+                <div id="particles-js"></div> 
+
+                <div class="home__box">
+                    <!-- <img class="home__img" src="./img/FotoPerfilSinFondo.png" alt="My photo"> -->
+                    <h1 class="home__title">NICKO<br>CHAMORRO
+                        <!-- <div class="home__decorCircle">
+                            <div class="home__image"></div>
+                            <div class="homeBackground"></div>
+                            <svg class="homeSvg">
+                                <filter id="noise">
+                                    <feTurbulence id="turbulence">
+                                        <animate attributeName="baseFrequency" dur="50s" values="0.9 0.9;0.8 0.8;0.9 0.9;" repeatCount="indefinite"></animate>
+                                    </feTurbulence>
+                                    <feDisplacementMap in="SourceGraphic" scale="60"></feDisplacementMap>
+                                </filter>
+                            </svg> 
+                        </div> -->
+                    </h1>
+                    <p class="home__subtitle">Argentine frontend developer<br>focused on innovation & creativity</p>  
+                </div>   
+            </div>
+        </header>
+        <div class="container container__experience" id="AboutMe">
+            <div class="experience">
+                <div class="experience__boxYears">
+                    <div class="experience__number experience__number--first">10
+                        <div class="experience__number experience__number--second">10</div>
+                        <div class="experience__number experience__number--third">10</div>
+                    </div>
+                    
+                    <span class="experience__text">+ YEARS<br>EXPERIENCE</span>
+                </div>
+                <div class="experience__boxParagraph">
+                    <!-- <p class="experience__details" id="experience-text1">I have been working in IT as a Genexus developer analyst for more than 10 years.</p>    
+                    <p class="experience__details" id="experience-text2">In the last few years I rediscovered my passion and specialized in frontend development.</p>     -->
+                    <p class="experience__splitText experience__splitText--first">I have been <strong>working</strong> in systems as a Genexus developer analyst for more than <strong>10 years</strong>.</p>
+                    <p class="experience__splitText experience__splitText--second">In the last few years I rediscovered my <strong>passion</strong> and specialized in <strong>frontend</strong> development.</p>
+                </div>
+            </div>    
+        </div>
+    </main>
+
+    <div class="space space--sphere">
+        <div class="sphereBox">
+            <span class="Sphere"></span>
+        </div>
+        <div class="space__textBox">
+            <h3 class="space__textTitle">Technologies</h3>
+            <p class="space__text">Select each one to get more information.</p>
+        </div>
+    </div>
+
+    <div class="space space--marquee">
+        <div class="title">
+            <div class="title__marquee">
+                <p class="title__text">Portfolio&nbsp;&nbsp;Portfolio&nbsp;&nbsp;Portfolio&nbsp;&nbsp;Portfolio&nbsp;&nbsp;</p>
+                <p class="title__text">Portfolio&nbsp;&nbsp;Portfolio&nbsp;&nbsp;Portfolio&nbsp;&nbsp;Portfolio&nbsp;&nbsp;</p>
+            </div>
+        </div> 
+    </div>
+
+    <div class="sectionFinal sectionContainerBarba" id="SecondScroll">
+        <div class="container container__portfolio container__portfolio--first" id="Portfolio">
+            <!-- Reveal Gallery 1 /+/ -->
+            <section class="reveal-gallery">
+                <div class="rg__column left" data-color="#a6b3b3">
+                    <div class="rg__text">
+                        <div class="rg__text--heading">
+                            <span class="rg__textSubtitle">01</span>
+                            <h3 class="rg__textTitle">Fixture Qatar '22</h3>
+                        </div>
+                        <div class="rg__text--copy">
+                            <div class="rg__text--mask">
+                                <p class="rg__textPar">Tech stack used:</p>
+                                <div class="rg__text--iconsBox">
+                                    <img class="rg__text--icon" src="./img/icons/react-svgrepo-com.png" alt="React">   
+                                    <img class="rg__text--icon" src="./img/icons/styled-components-logo.png" alt="Styled Components">
+                                    <img class="rg__text--icon" src="./img/icons/framer-logo.png" alt="Framer Motion">
+                                    <img class="rg__text--icon" src="./img/icons/axios_logo.png" alt="Axios">
+                                    <img class="rg__text--icon" src="./img/icons/json-file-svgrepo-com.png" alt="JSON">
+                                </div>
+                                <div class="rg__text--buttonBox">
+                                    <a target="_blank" class="rg__text--button" href="https://nickochamorro.github.io/React-FixtureMundial2022/">VIEW PAGE</a>
+                                    <a target="_blank" class="rg__text--button rg__text--buttonDouble" href="https://github.com/NickoChamorro/React-FixtureMundial2022">
+                                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                        GitHub
+                                    </a>     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rg__image">
+                        <div class="rg__image--mask">
+                            <!-- <img src="./img/img_landscape-01-large.jpg" /> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="rg__column center" data-color="#b0a7a4">
+                    <div class="rg__text">
+                        <div class="rg__text--heading">
+                            <span class="rg__textSubtitle">02</span>
+                            <h3 class="rg__textTitle">Prode Qatar '22</h3>
+                        </div>
+                        <div class="rg__text--copy">
+                            <div class="rg__text--mask">
+                                <p class="rg__textPar">Tech stack used:</p>
+                                <div class="rg__text--iconsBox">
+                                    <img class="rg__text--icon" src="./img/icons/react-svgrepo-com.png" alt="React">   
+                                    <img class="rg__text--icon" src="./img/icons/styled-components-logo.png" alt="Styled Components">
+                                    <img class="rg__text--icon" src="./img/icons/framer-logo.png" alt="Framer Motion">
+                                    <img class="rg__text--icon" src="./img/icons/axios_logo.png" alt="Axios">
+                                    <img class="rg__text--icon" src="./img/icons/mysql-logo-svgrepo-com.png" alt="Mysql">
+                                </div>
+                                <div class="rg__text--buttonBox">
+                                    <a target="_blank" class="rg__text--button" href="https://nickochamorro.github.io/TPReact_ProdeQatar/">VIEW PAGE</a>
+                                    <a target="_blank" class="rg__text--button rg__text--buttonDouble" href="https://github.com/NickoChamorro/TPReact_ProdeQatar">
+                                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                        GitHub
+                                    </a>     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rg__image">
+                        <div class="rg__image--mask">
+                            <!-- <img src="./img/img_landscape-02-large.jpg" /> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="rg__column right" data-color="#a3abb1">
+                    <div class="rg__text">
+                        <div class="rg__text--heading">
+                            <span class="rg__textSubtitle">03</span>
+                            <h3 class="rg__textTitle">Cervecería León</h3>
+                        </div>
+                        <div class="rg__text--copy">
+                            <div class="rg__text--mask">
+                                <p class="rg__textPar">Tech stack used:</p>
+                                <div class="rg__text--iconsBox">
+                                    <img class="rg__text--icon" src="./img/icons/html-5-svgrepo-com.png" alt="HTML">   
+                                    <img class="rg__text--icon" src="./img/icons/css-3-svgrepo-com.png" alt="CSS">
+                                    <img class="rg__text--icon" src="./img/icons/javascript-svgrepo-com.png" alt="Javascript">
+                                </div>
+                                <div class="rg__text--buttonBox">
+                                    <a target="_blank" class="rg__text--button" href="https://nickochamorro.github.io/TPCurso-CerveceriaLeon/">VIEW PAGE</a>
+                                    <a target="_blank" class="rg__text--button rg__text--buttonDouble" href="https://github.com/NickoChamorro/TPCurso-CerveceriaLeon">
+                                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                        GitHub
+                                    </a>     
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="rg__image">
+                        <div class="rg__image--mask">
+                            <!-- <img src="./img/img_landscape-03-large.jpg" /> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /Reveal Gallery 1 /-/ -->
+        </div>
+   
+        <div class="container container__portfolio container__portfolio--second">
+            <!-- Reveal Gallery 2 /+/ -->
+            <section class="reveal-gallery">
+                <div class="rg__column left" data-color="#a6b3b3">
+                    <div class="rg__text">
+                        <div class="rg__text--heading">
+                            <span class="rg__textSubtitle">04</span>
+                            <h3 class="rg__textTitle">Árbol Genealógico</h3>
+                        </div>
+                        <div class="rg__text--copy">
+                            <div class="rg__text--mask">
+                                <p class="rg__textPar">Tech stack used:</p>
+                                <div class="rg__text--iconsBox">
+                                    <img class="rg__text--icon" src="./img/icons/html-5-svgrepo-com.png" alt="HTML">   
+                                    <img class="rg__text--icon" src="./img/icons/css-3-svgrepo-com.png" alt="CSS">
+                                    <img class="rg__text--icon" src="./img/icons/javascript-svgrepo-com.png" alt="Javascript">
+                                    <img class="rg__text--icon" src="./img/icons/bootstrap-fill-svgrepo-com.png" alt="Bootstrap">
+                                </div>
+                                <div class="rg__text--buttonBox">
+                                    <a target="_blank" class="rg__text--button" href="https://nickochamorro.github.io/ArbolGenealogico/">VIEW PAGE</a>
+                                    <a target="_blank" class="rg__text--button rg__text--buttonDouble" href="https://github.com/NickoChamorro/ArbolGenealogico">
+                                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                        GitHub
+                                    </a>     
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rg__image">
+                        <div class="rg__image--mask">
+                            <!-- <img src="./img/img_landscape-01-large.jpg" /> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="rg__column center" data-color="#b0a7a4">
+                    <div class="rg__text">
+                        <div class="rg__text--heading">
+                            <span class="rg__textSubtitle">05</span>
+                            <h3 class="rg__textTitle">Card ID</h3>
+                        </div>
+                        <div class="rg__text--copy">
+                            <div class="rg__text--mask">
+                                <p class="rg__textPar">Tech stack used:</p>
+                                <div class="rg__text--iconsBox">
+                                    <img class="rg__text--icon" src="./img/icons/html-5-svgrepo-com.png" alt="HTML">   
+                                    <img class="rg__text--icon" src="./img/icons/css-3-svgrepo-com.png" alt="CSS">
+                                    <img class="rg__text--icon" src="./img/icons/javascript-svgrepo-com.png" alt="Javascript">
+                                    <img class="rg__text--icon" src="./img/icons/bootstrap-fill-svgrepo-com.png" alt="Bootstrap">
+                                </div>
+                                <div class="rg__text--buttonBox">
+                                    <a target="_blank" class="rg__text--button" href="https://nickochamorro.github.io/CursoReact-EjercicioCardId/">VIEW PAGE</a>
+                                    <a target="_blank" class="rg__text--button rg__text--buttonDouble" href="https://github.com/NickoChamorro/CursoReact-EjercicioCardId">
+                                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                        GitHub
+                                    </a>     
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="rg__image">
+                        <div class="rg__image--mask">
+                            <!-- <img src="./img/img_landscape-02-large.jpg" /> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="rg__column right" data-color="#a3abb1">
+                    <div class="rg__text">
+                        <div class="rg__text--heading">
+                            <span class="rg__textSubtitle">06</span>
+                            <h3 class="rg__textTitle">Juegos JS</h3>
+                        </div>
+                        <div class="rg__text--copy">
+                            <div class="rg__text--mask">
+                                <p class="rg__textPar">Tech stack used:</p>
+                                <div class="rg__text--iconsBox">
+                                    <img class="rg__text--icon" src="./img/icons/html-5-svgrepo-com.png" alt="HTML">   
+                                    <img class="rg__text--icon" src="./img/icons/css-3-svgrepo-com.png" alt="CSS">
+                                    <img class="rg__text--icon" src="./img/icons/javascript-svgrepo-com.png" alt="Javascript">
+                                </div>
+                                <div class="rg__text--buttonBox">
+                                    <a target="_blank" class="rg__text--button" href="https://nickochamorro.github.io/EjercicioJuegosJS/">VIEW PAGE</a>
+                                    <a target="_blank" class="rg__text--button rg__text--buttonDouble" href="https://github.com/NickoChamorro/EjercicioJuegosJS">
+                                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                        GitHub
+                                    </a>     
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="rg__image">
+                        <div class="rg__image--mask">
+                            <!-- <img src="./img/img_landscape-03-large.jpg" /> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /Reveal Gallery 2 /-/ -->
+        </div>
+
+        <section class="container container__contact" id="Contact">
+            <div class="box-info">
+                <h2 class="contact__title">GET IN TOUCH</h2>
+                <div class="contact__data">
+                    <p class="contact__data--email"><i class="fa-solid fa-envelope"></i>NICKO.CHAMORRO@GMAIL.COM</p>
+                    <p class="contact__data--site"><i class="fa-solid fa-location-dot"></i>Buenos Aires, Argentina.</p>
+                </div>
+                <!-- <div class="links">
+                    
+                    <a href="https://github.com/NickoChamorro" target="_blank">
+                        <i class="fa-brands fa-github fa-beat" style="--fa-animation-duration: 3s;" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/nickochamorro/" target="_blank">
+                        <i class="fa-brands fa-linkedin-in fa-beat" style="--fa-animation-duration: 3s;" aria-hidden="true"></i>
+                    </a>
+                </div> -->
+                <div class="contact__buttonBox">
+                    <a target="_blank" class="contact__button" href="https://github.com/NickoChamorro">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        GitHub
+                    </a>   
+                    <a target="_blank" class="contact__button" href="https://www.linkedin.com/in/nickochamorro/">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        Linkedin
+                    </a>  
+                    <a target="_blank" class="contact__button">
+                        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                        Resume
+                    </a> 
+                </div>
+            </div>
+            <form class="contact__form">
+                <div class="input-box">
+                    <input type="text" placeholder="Full name" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" required placeholder="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <textarea placeholder="Type your message..."></textarea>
+                </div>
+                <button class="form__button" type="submit">SEND YOUR MESSAGE</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- <div class="firma">Nicko Chamorro</div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="./js/script.js" defer></script>
+    <script async src="https://kit.fontawesome.com/45f945ceff.js" crossorigin="anonymous"></script>
+</body>
+</html>
