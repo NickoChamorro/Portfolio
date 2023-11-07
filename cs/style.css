@@ -1155,13 +1155,14 @@ svg:hover #textcircle{
   
 /* =Reveal Gallery */
 .reveal-gallery {
+    position: relative;
     width: 100%;
-    flex-direction: column;
-    overflow: hidden;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    flex-direction: row;
     color: var(--text-dark-color);
-    position: relative;
+    overflow: hidden;
     z-index: 1;
 }
 .rg__column {
@@ -1195,7 +1196,8 @@ svg:hover #textcircle{
     position: relative;
 }
 .rg__text--copy {
-    margin-top: 1.2rem;
+    position: absolute;
+    overflow: hidden;
     /* font-weight: 300;
     letter-spacing: .03vw; */
 }
@@ -1327,25 +1329,6 @@ svg:hover #textcircle{
     width: 100%;
     height: 100%;
     position: fixed;
-}
-
-@media only screen and (min-width: 768px) {
-
-    /* =Reveal Gallery */
-    .reveal-gallery {
-      flex-direction: row;
-      height: 100vh;
-    }
-    .rg__column {
-      min-height: auto;
-    }
-    .rg__text--copy {
-      position: absolute;
-      overflow: hidden;
-    }
-    .rg__text {
-      max-width: 17vw;
-    }
 }
 /* ----- SECCION CONTACT ----- */
 
@@ -1595,6 +1578,48 @@ svg:hover #textcircle{
     25%,  75% {transform: translateX(3px);} 
  }
 
+.firma{
+    margin-top: 1rem;
+    font-family: Lingkawi;
+    font-size: 5rem;
+    font-weight: bold;
+    color:chartreuse;
+}  
+
+/* ==========================================================================
+  Media Queries
+ ========================================================================== */
+
+ @media only screen and (max-width: 768px) {
+
+    /* =Reveal Gallery */
+    .reveal-gallery {
+      flex-direction: column;
+      height: 100vh;
+    }
+    .rg__column {
+      min-height: 0; 
+    }
+    .rg__text--heading{
+        color: var(--text-dark-color);
+    }    
+    .rg__text {
+      /* max-width: 17vw; */
+      display: flex;
+      flex-direction: column;
+    }
+    .rg__text--copy{
+        position: relative;
+        display: flex;
+        justify-content: start;
+    }
+    .rg__text--mask{
+        display: flex;
+        justify-content: start;
+        flex-flow: row wrap;
+        gap: 5px;
+    }
+}
 
 @media screen and (max-width:600px) {
     .container__contact {
@@ -1612,17 +1637,3 @@ svg:hover #textcircle{
         font-size: 1.5rem;
     }
 }
-
-.firma{
-    margin-top: 1rem;
-    font-family: Lingkawi;
-    font-size: 5rem;
-    font-weight: bold;
-    color:chartreuse;
-}  
-
-
-
-/* ==========================================================================
-  Media Queries
- ========================================================================== */

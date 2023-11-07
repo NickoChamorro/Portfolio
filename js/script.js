@@ -5,10 +5,13 @@ gsap.defaults({ease:'none', duration: 2});
 const select = (e) => document.querySelector(e);
 const selectAll = (e) => document.querySelectorAll(e);
 
+// define a breakpoint
+const mq = window.matchMedia('(min-width: 768px)');
+
 // ----------- Cursor -----------
 const cursor = select('.cursor');
 document.addEventListener("mousemove", (e) => {
-    if (e.pageX === 0 || e.pageY === 0) {
+    if (e.pageX === 0 || e.pageY === 0 || !mq.matches) {
         cursor.style.opacity = 0;
     } else {
         cursor.style.opacity = 1;
@@ -434,12 +437,9 @@ function initPortfolioAnimation(){
         return tl2;
     }
 
-    // define a breakpoint
-    const mq = window.matchMedia('(min-width: 768px)');
-
     // add change listerner to this breakpoint
     mq.addEventListener("change", (e) => {
-        this.handleWidthChange(e);
+        handleWidthChange(e);
     }); 
 
     // first page load
