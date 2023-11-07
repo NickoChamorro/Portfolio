@@ -186,7 +186,8 @@ function initFirstScrollAnimation(){
     tl.addLabel('initial')
     .to('#Sunglasses', sunglassesPosition(exposure1, orbit1, 1.5))
     .to('#Sunglasses', sunglassesPosition(exposure1, orbit2, 1)) 
-    .to('.container__initial',{opacity:0, scale: 3, duration: 1, onComplete: changePropertyContainerFinal }) 
+    .to('#Sunglasses',{opacity:0, scale: 3, duration: 1, onComplete: changePropertyContainerFinal })  /* .container__initial */
+    .to('.wrapper',{opacity:0, duration: 1 },'=-1')
     .from('.container__presentation', {opacity:0}) 
     .from('.home__title', {scale:1.5, duration: .8}, '=-1.5')
     .from('.home__subtitle', {scale:1.5, opacity:0, duration: .8}, '=-1.5')
@@ -349,33 +350,34 @@ function initSphereCloud(){
     let color = 'white';
     document.querySelector('.Sphere').style.color = color;
 
-    // Action when hover item in sphere
+    // Action when hover item in sphere // Not in mobile
+    if (mq.matches){
+        const skillTitle = select('.space__textTitle');
+        const skillText  = select('.space__text');
 
-    const skillTitle = select('.space__textTitle');
-    const skillText  = select('.space__text');
+        let sphereBox = document.querySelector('.sphereBox');
+        sphereBox.addEventListener('mouseover', function clickEventHandler(e) {
+            if (e.target.className === 'tagcloud--item') {
+                tagCloud.pause();
+                DescriptionSkills.map((item) =>{
+                    if (item.id === e.target.innerHTML){
+                        console.log(item.desc)
+                        skillTitle.innerHTML = item.id
+                        skillText.innerHTML = item.desc
+                    }
+                })
+            
+            }
+        }); 
 
-    let sphereBox = document.querySelector('.sphereBox');
-    sphereBox.addEventListener('mouseover', function clickEventHandler(e) {
-        if (e.target.className === 'tagcloud--item') {
-            tagCloud.pause();
-            DescriptionSkills.map((item) =>{
-                if (item.id === e.target.innerHTML){
-                    console.log(item.desc)
-                    skillTitle.innerHTML = item.id
-                    skillText.innerHTML = item.desc
-                }
-            })
-        
-        }
-    }); 
-
-    sphereBox.addEventListener('mouseout', function clickEventHandler(e) {
-        if (e.target.className === 'tagcloud--item') {
-            tagCloud.resume();
-            skillTitle.innerHTML = "Technologies"
-            skillText.innerHTML = "Select each one to get more information."
-        }
-    }); 
+        sphereBox.addEventListener('mouseout', function clickEventHandler(e) {
+            if (e.target.className === 'tagcloud--item') {
+                tagCloud.resume();
+                skillTitle.innerHTML = "Technologies"
+                skillText.innerHTML = "Select each one to get more information."
+            }
+        }); 
+    }    
 }
 
 

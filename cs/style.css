@@ -1619,6 +1619,19 @@ svg:hover #textcircle{
         flex-flow: row wrap;
         gap: 5px;
     }
+    .imageIcon{
+        display: none;
+    }
+    .space--sphere{
+        grid-template-areas: "sphereBox";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        gap: 0;
+    }    
+    .space__textBox{
+        visibility: hidden;
+    }
+    
 }
 
 @media screen and (max-width:600px) {
