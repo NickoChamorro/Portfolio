@@ -380,7 +380,7 @@ svg:hover #textcircle{
     background:var(--bcg-dark); /* radial-gradient(white, black); */
     border: 1px solid var(--bcg-light) ;
     z-index: 1000;
-    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
   
 .nav {
@@ -450,7 +450,7 @@ svg:hover #textcircle{
 
 /* functionality */
 .checkbox:checked ~ .background {
-    transform: scale(80);
+    transform: scale(90);
 }
 .checkbox:checked ~ .nav {
     opacity: 1;
@@ -967,7 +967,7 @@ svg:hover #textcircle{
     font-weight: 500; */
     display: flex;
     justify-content: start;
-    align-items: center;
+    align-items: start;
     flex-flow: column wrap;
     padding-top: 2rem;
     overflow: hidden;
