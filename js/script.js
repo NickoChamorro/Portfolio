@@ -122,11 +122,13 @@ window.addEventListener( "load", function(){
 function initContent(){
     select('body').classList.remove('is-loading');
     initFirstScrollAnimation()
+    initBackgroundParticle()
     initSphereCloud()
     initPortfolioAnimation()
     initSpaceAnimation()
     initSecondScrollAnimation()
     initNavMenu()
+    initButtonEffects()
 };
 
 // Controladores modelos 3D
@@ -216,9 +218,11 @@ function initFirstScrollAnimation(){
     });
 }
 
-// ----------- Particle js Home background -----------
-function initSphereCloud(){
 
+
+
+// ----------- Particle js Home background -----------
+function initBackgroundParticle(){
     particlesJS("particles-js", 
         {"particles":{
             "number":{"value":123,"density":{"enable":true,"value_area":800}},
@@ -241,8 +245,10 @@ function initSphereCloud(){
                     "remove":{"particles_nb":2}}
         },"retina_detect":true
     }); 
+}
 
-    // ----------- Sphere Cloud Skills -----------
+// ----------- Sphere Cloud Skills -----------
+function initSphereCloud(){
     const Skills = [
         'HTML', 'CSS', 'JAVASCRIPT',
         'REACT', 'STYLED COMPONENTS', 'GSAP', 'FRAMER MOTION',
@@ -330,18 +336,14 @@ function initSphereCloud(){
         }
     ]
 
-
     let tagCloud = TagCloud('.Sphere', Skills, {
         // Sphere radius in px
         radius: 280,
-
         // animation speed // slow, normal, fast
         maxSpeed: 'normal',
         initSpeed: 'fast',
-
         // Rolling direction [0 (top) , 90 (left), 135 (right-bottom)] 
         direction: 135,
-
         // interaction with mouse or not [Default true (decelerate to rolling init speed, and keep rolling with mouse).]
         keep: true
     });
@@ -628,3 +630,4 @@ function initNavMenu(){
         }); 
     };
 }
+   
