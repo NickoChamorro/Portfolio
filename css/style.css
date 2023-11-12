@@ -41,6 +41,8 @@
     --text-color: white;
     --text-dark-color: #000000;
     --text-grey: grey;
+    --text-greyLight: rgb(206, 201, 201);
+    --text-greyDark: rgb(68, 67, 67);
     
     --text-family-primary: Dahlia;
     --text-family-secondary: RightGroteskSpacial;
@@ -415,12 +417,13 @@ svg:hover #textcircle{
     font-weight: 700;
     font-size: 2.25rem; 
     letter-spacing: var(--l-spacing-subt); 
+    transition: 0.5s all ease;
+    cursor: pointer;
 }
 
 .nav__link:hover,
 .nav__link:active {
     text-shadow: 0 0 2px #fff, 0 0 5px #fff;
-    cursor: pointer;
 }
   
 .nav__link::before{
@@ -940,25 +943,28 @@ svg:hover #textcircle{
 
 .experience__number--first{
     position: relative;
-    z-index: 3;
+    color: var(--text-greyLight);
+    z-index: 1;
 }
 
 .experience__number--second, .experience__number--third{
     position: absolute;
     top: 0;
-    -webkit-text-stroke: 2px var(--text-dark-color);
-    color: transparent; 
+    /* -webkit-text-stroke: 2px var(--text-dark-color);
+    color: transparent; */ 
    
 }
 
 .experience__number--second{
+    color: var(--text-grey);
     left: 100%;
     z-index: 2;
 }
 
 .experience__number--third{
+    color: var(--text-greyDark);
     left: 198%;
-    z-index: 1;
+    z-index: 3;
 }
 
 .experience__boxParagraph{
@@ -1097,7 +1103,7 @@ svg:hover #textcircle{
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    animation: marquee 60s linear infinite;
+    /* animation: marquee 60s linear infinite; */
     color: var(--text-color);
 }
 
@@ -1114,8 +1120,8 @@ svg:hover #textcircle{
     display: inline-block;
     font-family: var(--text-family-primary);
     text-transform: uppercase;
-    font-size: 15rem;
-    letter-spacing: var(--l-spacing-tit);
+    font-size: 12rem;
+    /* letter-spacing: var(--l-spacing-tit); */
 }
 
 /* ----- SECCION PORTFOLIO ----- */

@@ -124,6 +124,7 @@ function initContent(){
     initFirstScrollAnimation()
     initBackgroundParticle()
     initSphereCloud()
+    initPortfolioMarqueeAnimation()
     initPortfolioAnimation()
     initSpaceAnimation()
     initSecondScrollAnimation()
@@ -202,6 +203,7 @@ function initFirstScrollAnimation(){
     .from('.container__experience', {yPercent:150}, '-=2')
     .to('.experience__number--second', {left: '0', duration: 1.5},'-=0.5')  
     .to('.experience__number--third', {left: '0', duration: 1.5}, '-=1.5') 
+    .to('.experience__number--third', {color: '#000', duration: 0.1}) 
     .from('.experience__text', {xPercent: 350, duration: 1.5}, '-=1.5')
     .from(chars1, {yPercent: 320, stagger: 0.02,ease: 'back.out', duration:1.5})
     .from(chars2, {yPercent: 420, stagger: 0.02,ease: 'back.out', duration:1.5}, '-=1')
@@ -382,6 +384,30 @@ function initSphereCloud(){
     }    
 }
 
+function initPortfolioMarqueeAnimation(){
+    const marqueeBox = select('.title');
+    const marqueeText = select('.title__text');
+
+    let animMarqueeText = gsap.to(marqueeText, {
+        x: -500, duration: 1,
+        scrollTrigger: {
+            trigger: marqueeText,
+            start: 'top 50%',
+            end: 'bottom top',
+            scrub: true,
+            toggleActions: 'play play reverse reverse'}
+    })
+
+    let animMarqueeBox = gsap.to(marqueeBox, {
+        y: 80, duration: 1,
+        scrollTrigger: {
+            trigger: marqueeBox,
+            start: 'top 50%',
+            end: 'bottom top',
+            scrub: true,
+            toggleActions: 'play play reverse reverse'}
+    })
+}
 
 function initPortfolioAnimation(){
     // Reveal images portfolio
