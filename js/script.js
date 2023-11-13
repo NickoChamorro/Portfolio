@@ -129,7 +129,6 @@ function initContent(){
     initSpaceAnimation()
     initSecondScrollAnimation()
     initNavMenu()
-    initButtonEffects()
 };
 
 // Controladores modelos 3D
