@@ -1274,7 +1274,7 @@ svg:hover #textcircle{
     margin-top: 2rem;
 }
 
-.rg__text--button {
+/* .rg__text--button {
     position: relative;
     display: inline-block;
     background: var(--bcg-light); 
@@ -1327,6 +1327,50 @@ svg:hover #textcircle{
 
 .rg__text--button i {
     font-size: 25px;
+} */
+
+.rg__text--button { 
+    width: 101%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    font-family: var(--text-family-secondary); 
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    background: var(--bcg-dark);
+    -webkit-mask: url("../img/spriteBackButton.png"); /*https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png*/
+    mask: url("../img/spriteBackButton.png");
+    -webkit-mask-size: 2300% 100%;
+    mask-size: 2300% 100%;
+    border: none;
+    color: var(--text-color);
+    text-decoration: none;
+
+    cursor: pointer;
+    -webkit-animation: ani2 0.7s steps(22) forwards;
+    animation: ani2 0.7s steps(22) forwards;
+}
+
+.rg__text--button:hover {
+    -webkit-animation: ani 0.7s steps(22) forwards;
+    animation: ani 0.7s steps(22) forwards;
+}
+
+.rg__text--button i, .mas--portfolio i{
+    font-size: 25px;
+} 
+
+.rg__text--buttonDouble{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    gap: 0.3rem;
+    /* padding: 4px 0; */
 }
 
 .fill-background {
@@ -1483,8 +1527,8 @@ svg:hover #textcircle{
     letter-spacing: 1px;
 
     background: var(--bcg-dark);
-    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
-    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask: url("../img/spriteBackButton.png"); /*https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png*/
+    mask: url("../img/spriteBackButton.png");
     -webkit-mask-size: 2300% 100%;
     mask-size: 2300% 100%;
     border: none;
@@ -1494,12 +1538,15 @@ svg:hover #textcircle{
     cursor: pointer;
     -webkit-animation: ani2 0.7s steps(22) forwards;
     animation: ani2 0.7s steps(22) forwards;
-
 }
 
 .contact__button2:hover {
     -webkit-animation: ani 0.7s steps(22) forwards;
     animation: ani 0.7s steps(22) forwards;
+}
+
+.contact__button2 i, .mas i{
+    font-size: 25px;
 }
 
 /**/
@@ -1560,7 +1607,6 @@ svg:hover #textcircle{
     border-radius: 10px;
 }
 
-
 .input-box > i {
     position:absolute;
     top:50%;
@@ -1615,9 +1661,10 @@ svg:hover #textcircle{
     position: relative;
     width: 100%;
     height: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     background: var(--bcg-light);
     border: 2px solid var(--bcg-light);
     font-family: var(--text-family-secondary); 
@@ -1625,17 +1672,19 @@ svg:hover #textcircle{
     font-weight: bold;
     letter-spacing: 1px;
     border-radius: 30px;
-    
-    transition: 0.5s;
+
+    transition: 0.5s all ease;
     overflow: hidden;
+}
+
+.button-containerMain--portfolio{
+    width: 110px;
+    height: 40px;
+    border: 2px solid var(--bcg-dark);
 }
 
 .button-containerMain--social{
     width: 160px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     margin-top: 0;
 }
 
@@ -1649,8 +1698,8 @@ svg:hover #textcircle{
     letter-spacing: 1px;
 
     background: var(--bcg-dark);
-    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
-    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+    -webkit-mask: url("../img/spriteBackButton.png");
+    mask: url("../img/spriteBackButton.png");
     -webkit-mask-size: 2300% 100%;
     mask-size: 2300% 100%;
     border: none;
@@ -1669,6 +1718,10 @@ svg:hover #textcircle{
 
 .mas {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
     background: white;
     color: #000;
     text-align: center;
@@ -1676,13 +1729,12 @@ svg:hover #textcircle{
     font-family: var(--text-family-secondary); 
     font-size: 1rem;
     font-weight: bold;
-    /* margin-top: 17px; */
-    transform: translate(0, 80%);
     overflow: hidden;
 }
 
-.mas--social{
-    transform: translate(0);
+.mas--portfolio{
+    font-size: 0.7rem;
+    gap: 3px;
 }
 
 @-webkit-keyframes ani {

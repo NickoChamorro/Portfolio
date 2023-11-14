@@ -219,10 +219,7 @@ function initFirstScrollAnimation(){
     });
 }
 
-
-
-
-// ----------- Particle js Home background -----------
+// ----------- Particle js Home  -----------
 function initBackgroundParticle(){
     particlesJS("particles-js", 
         {"particles":{
