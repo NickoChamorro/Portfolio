@@ -185,6 +185,14 @@ function initFirstScrollAnimation(){
     const splitTextSecond = new SplitType('.experience__splitText--second', { types: 'words'})
     const chars2 = splitTextSecond.words;
 
+    let rightButton  = "3vw";
+    let rightBackground = "3.5vw";
+
+    if (!mq.matches) {
+        rightButton  = "17vw";
+        rightBackground = "17.5vw";
+    }
+
     tl.addLabel('initial')
     .to('#Sunglasses', sunglassesPosition(exposure1, orbit1, 1.5))
     .to('#Sunglasses', sunglassesPosition(exposure1, orbit2, 1)) 
@@ -193,9 +201,9 @@ function initFirstScrollAnimation(){
     .from('.container__presentation', {opacity:0}) 
     .from('.home__title', {scale:1.5, duration: .8}, '=-1.5')
     .from('.home__subtitle', {scale:1.5, opacity:0, duration: .8}, '=-1.5')
-    .to('.button', {right: '3vw', duration: 1}, '=-1')
+    .to('.button', {right: rightButton, duration: 1}, '=-1')
     .to('.imageIcon', {left: '3vw', duration: 1}, '=-1')
-    .to('.background', {right:'3.5vw', duration: 1}, '=-1')
+    .to('.background', {right: rightBackground, duration: 1}, '=-1')
     .addLabel('home')
     .to('.container__presentation', {scale:3, delay: 1, duration:1.5})
     .to('.home__title', {x:-100, duration:1.5}, '=-1.5')

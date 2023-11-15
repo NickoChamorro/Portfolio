@@ -1805,8 +1805,33 @@ svg:hover #textcircle{
  ========================================================================== */
 
  @media only screen and (max-width: 768px) {
+    /* Button menu*/
+    .button{
+        right: -18vw; 
+    }
+    .background{
+        right: -18.5vw;
+    }  
+    /* Logo photo*/
+    .imageIcon{
+        display: none;
+    }
+    /* Home section*/
+    .home__box {
+        max-width: 90%; 
+    }    
+    /* Skill section*/
+    .space--sphere{
+        grid-template-areas: "sphereBox";
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr;
+        gap: 0;
+    }    
+    .space__textBox{
+        visibility: hidden;
+    }
 
-    /* =Reveal Gallery */
+    /* Portfolio section */
     .reveal-gallery {
       flex-direction: column;
       height: 100vh;
@@ -1833,18 +1858,8 @@ svg:hover #textcircle{
         flex-flow: row wrap;
         gap: 5px;
     }
-    .imageIcon{
-        display: none;
-    }
-    .space--sphere{
-        grid-template-areas: "sphereBox";
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr;
-        gap: 0;
-    }    
-    .space__textBox{
-        visibility: hidden;
-    }
+    
+    
     
 }
 
