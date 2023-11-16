@@ -10,6 +10,7 @@ const mq = window.matchMedia('(min-width: 768px)');
 
 // ----------- Cursor -----------
 const cursor = select('.cursor');
+cursor.style.opacity = 0;
 document.addEventListener("mousemove", (e) => {
     if (e.pageX === 0 || e.pageY === 0 || !mq.matches) {
         cursor.style.opacity = 0;
@@ -121,6 +122,7 @@ window.addEventListener( "load", function(){
 // All animations functions
 function initContent(){
     select('body').classList.remove('is-loading');
+    initSmoothScroll()
     initFirstScrollAnimation()
     initBackgroundParticle()
     initSphereCloud()
@@ -138,6 +140,22 @@ let rollSunglasses = 1, pitchSunglasses = 1, yawSunglasses = 90;
 const updateOrientation = (modelViewerTransform,roll,pitch,yaw) => {
     modelViewerTransform.orientation = `${roll}deg ${pitch}deg ${yaw}deg`;
 };
+
+// ----------- Smooth Scroll -----------
+function initSmoothScroll(){
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        ScrollTrigger.update();
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+}
 
 // ----------- Scroll GSAP animations -----------
 const tl = gsap.timeline()
@@ -181,16 +199,20 @@ function initFirstScrollAnimation(){
 
     const splitTextFirst = new SplitType('.experience__splitText--first', { types: 'words'})
     const chars1 = splitTextFirst.words;
+    let chars1YPercent = 320;
 
     const splitTextSecond = new SplitType('.experience__splitText--second', { types: 'words'})
     const chars2 = splitTextSecond.words;
+    let chars2YPercent = 420;
 
     let rightButton  = "3vw";
     let rightBackground = "3.5vw";
 
     if (!mq.matches) {
-        rightButton  = "17vw";
+        rightButton     = "17vw";
         rightBackground = "17.5vw";
+        chars1YPercent  = 450;
+        chars2YPercent  = 520;
     }
 
     tl.addLabel('initial')
@@ -212,8 +234,8 @@ function initFirstScrollAnimation(){
     .to('.experience__number--third', {left: '0', duration: 1.5}, '-=1.5') 
     .to('.experience__number--third', {color: '#000', duration: 0.1}) 
     .from('.experience__text', {xPercent: 350, duration: 1.5}, '-=1.5')
-    .from(chars1, {yPercent: 320, stagger: 0.02,ease: 'back.out', duration:1.5})
-    .from(chars2, {yPercent: 420, stagger: 0.02,ease: 'back.out', duration:1.5}, '-=1')
+    .from(chars1, {yPercent: chars1YPercent, stagger: 0.02,ease: 'back.out', duration:1.5})
+    .from(chars2, {yPercent: chars2YPercent, stagger: 0.02,ease: 'back.out', duration:1.5}, '-=1')
     .addLabel('aboutme')
 
     ScrollTrigger.create({
@@ -342,9 +364,15 @@ function initSphereCloud(){
         }
     ]
 
+    let radiusSphere = 280;
+    
+    if (!mq.matches){
+        radiusSphere = 250
+    }
+
     let tagCloud = TagCloud('.Sphere', Skills, {
         // Sphere radius in px
-        radius: 280,
+        radius: radiusSphere,
         // animation speed // slow, normal, fast
         maxSpeed: 'normal',
         initSpeed: 'fast',

@@ -386,7 +386,7 @@ svg:hover #textcircle{
 }
   
 .nav {
-    height: 100vh;
+    height: 100dvh;
     position: fixed;
     top: 0;
     right: -60vw;
@@ -432,32 +432,36 @@ svg:hover #textcircle{
     top: 5vh;
     left: 0;
     /* width: 100%; */
-    height: 100%;
+    height: 80%;
     overflow: hidden;
     z-index: -1;
     text-align: center;
     font-size: 10rem;
     opacity: 0;
     /* line-height: 100vh; */
-    transition: 0.5s;
+    transition: 0;
     text-shadow: none; 
     color: #434343; 
     display: inline-block;
-    animation: marquee 60s linear infinite;
     white-space: nowrap;
+    cursor: none;
+    pointer-events: none;
 }
 
 .nav__link:hover.nav__link::before{
     opacity: 1;
+    transition: 0.5s;
+    animation: marquee 60s linear infinite;
 }
 
 /* functionality */
 .checkbox:checked ~ .background {
-    transform: scale(90);
+    transform: scale(80); /*90*/
+    overflow: hidden;
 }
 .checkbox:checked ~ .nav {
     opacity: 1;
-    width: 100%;
+    width: 100dvw;
     right: 0;
 }
 
@@ -1819,13 +1823,28 @@ svg:hover #textcircle{
     /* Home section*/
     .home__box {
         max-width: 90%; 
+    } 
+    /* Experience section*/
+    .experience__boxYears{
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+    }
+    .experience__number{
+        font-size: 12rem;
+    }    
+    .experience__splitText{
+        padding: 0.7rem 0;
     }    
     /* Skill section*/
+    .sphereBox{
+        justify-content: start;
+        overflow: inherit;
+    }
     .space--sphere{
-        grid-template-areas: "sphereBox";
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr;
-        gap: 0;
+        grid-template-areas: "sphereBox sphereBox sphereBox sphereBox";
+        grid-column-gap: 0px;
+        
     }    
     .space__textBox{
         visibility: hidden;
