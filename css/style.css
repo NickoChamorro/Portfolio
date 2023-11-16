@@ -58,6 +58,7 @@
     --f-size-tit: clamp(3.5rem, 12vw, 15rem);
     --f-size-subt: clamp(0.6rem, 3vw, 1.2rem);
     --f-size-ter: clamp(1.2rem, 3vw, 1.6rem);
+    --f-size-titPort: clamp(1.5rem, 3vw, 2.7rem);
 
     --l-spacing-tit: 1.2rem;
     --l-spacing-subt: 0.2rem;
@@ -1197,7 +1198,7 @@ svg:hover #textcircle{
 
 .rg__textTitle {
     font-weight: bold;
-    font-size: 3.6vw;
+    font-size: var(--f-size-titPort); /*3.6vw;*/
     line-height: 1.192307692;
     margin-top: 0.5rem;
 }
@@ -1335,7 +1336,7 @@ svg:hover #textcircle{
 
 .rg__text--button { 
     width: 101%;
-    height: 100%;
+    height: 105%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1349,8 +1350,8 @@ svg:hover #textcircle{
     background: var(--bcg-dark);
     -webkit-mask: url("../img/spriteBackButton.png"); /*https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png*/
     mask: url("../img/spriteBackButton.png");
-    -webkit-mask-size: 2300% 100%;
-    mask-size: 2300% 100%;
+    -webkit-mask-size: 2300% 101%;
+    mask-size: 2300% 101%;
     border: none;
     color: var(--text-color);
     text-decoration: none;

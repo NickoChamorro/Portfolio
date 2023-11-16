@@ -610,9 +610,17 @@ function initSpaceAnimation(){
 const tl3 = gsap.timeline();
 
 function initSecondScrollAnimation(){
+    let portfolioFirstAnimation = {xPercent:-150}; 
+    let portfolioSecondAnimation = {xPercent:150};
+
+    if (!mq.matches){
+        portfolioFirstAnimation  = {yPercent:-150};
+        portfolioSecondAnimation = {yPercent:150};
+    }
+
     tl3.addLabel('portfolio')
-    .to('.container__portfolio--first', {xPercent:-150}) 
-    .from('.container__portfolio--second', {xPercent:150}, '=-2.67') 
+    .to('.container__portfolio--first', portfolioFirstAnimation) 
+    .from('.container__portfolio--second', portfolioSecondAnimation, '=-2.67') 
     .from('.container__contact', { yPercent:150, duration:0.8})
     .from('.contact__title', { scale:8, xPercent:300, duration:0.8}, '=-0.8') 
     .from('.contact__data', { xPercent:-250, duration:0.8}, '=-0.8')
