@@ -54,8 +54,8 @@ const pElements=document.getElementsByTagName("p");
 addHoverCursor(pElements);
 const spanElements=document.getElementsByTagName("span");
 addHoverCursor(spanElements);
-const aElements=document.getElementsByTagName("a");
-addHoverCursor(aElements);
+/* const aElements=document.getElementsByTagName("a");
+addHoverCursor(aElements); */
 const textElements=document.getElementsByClassName("home__title");
 addHoverCursor(textElements, "big");
 const experienceElements=document.getElementsByClassName("experience__number");
@@ -66,8 +66,8 @@ const formElements=document.getElementsByClassName("input-box");
 addHoverCursor(formElements);
 const titlePortfolioElements=document.getElementsByClassName("rg__textTitle");
 addHoverCursor(titlePortfolioElements);
-const submitFormElements=document.getElementsByClassName("form__button");
-addHoverCursor(submitFormElements);
+/* const submitFormElements=document.getElementsByClassName("form__button");
+addHoverCursor(submitFormElements); */
 const titleFormElements=document.getElementsByClassName("contact__title");
 addHoverCursor(titleFormElements, "big");
 
@@ -209,8 +209,8 @@ function initFirstScrollAnimation(){
     let rightBackground = "3.5vw";
 
     if (!mq.matches) {
-        rightButton     = "17vw";
-        rightBackground = "17.5vw";
+        rightButton     = "3.5vw";
+        rightBackground = "4vw";
         chars1YPercent  = 450;
         chars2YPercent  = 520;
     }
@@ -367,7 +367,7 @@ function initSphereCloud(){
     let radiusSphere = 280;
     
     if (!mq.matches){
-        radiusSphere = 250
+        radiusSphere = 200
     }
 
     let tagCloud = TagCloud('.Sphere', Skills, {

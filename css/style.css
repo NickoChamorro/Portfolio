@@ -57,7 +57,7 @@
 
     --f-size-tit: clamp(3.5rem, 12vw, 15rem);
     --f-size-subt: clamp(0.6rem, 3vw, 1.2rem);
-    --f-size-ter: clamp(1.2rem, 3vw, 1.6rem);
+    --f-size-ter: clamp(1.1rem, 3vw, 1.6rem);
     --f-size-titPort: clamp(1.5rem, 3vw, 2.7rem);
 
     --l-spacing-tit: 1.2rem;
@@ -92,10 +92,10 @@ body{
 
 /* ---------- Scrollbar CSS ---------- */
 /* Firefox */
-* {
+ * {
     scrollbar-width: auto;
     scrollbar-color: #3c393c #000000;
-}
+} 
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
@@ -113,7 +113,6 @@ body{
     border-radius: 10px;
     border: 1.5px solid #ffffff;
 }
-
 /* ----------- Cursor ----------- */ 
 .cursor{
     position: fixed;
@@ -1809,13 +1808,19 @@ svg:hover #textcircle{
   Media Queries
  ========================================================================== */
 
- @media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     /* Button menu*/
     .button{
         right: -18vw; 
+        height: 3.5rem;
+        width: 3.5rem;
+        top: 1.5vh;
     }
     .background{
         right: -18.5vw;
+        height: 3rem;
+        width: 3rem;
+        top: 2vh; 
     }  
     /* Logo photo*/
     .imageIcon{
@@ -1836,36 +1841,36 @@ svg:hover #textcircle{
     }    
     .experience__splitText{
         padding: 0.7rem 0;
-    }    
+    }
     /* Skill section*/
     .sphereBox{
         justify-content: start;
-        overflow: inherit;
     }
     .space--sphere{
         grid-template-areas: "sphereBox sphereBox sphereBox sphereBox";
         grid-column-gap: 0px;
-        
-    }    
+    }
     .space__textBox{
-        visibility: hidden;
+        display: none;
+    }
+    /* Portfolio section */
+    .title__text{
+        font-size: 8rem;
     }
 
-    /* Portfolio section */
     .reveal-gallery {
-      flex-direction: column;
-      height: 100vh;
+        flex-direction: column;
+        height: 100vh;
     }
     .rg__column {
-      min-height: 0; 
+        min-height: 0; 
     }
     .rg__text--heading{
         color: var(--text-dark-color);
     }    
     .rg__text {
-      /* max-width: 17vw; */
-      display: flex;
-      flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
     .rg__text--copy{
         position: relative;
@@ -1875,12 +1880,15 @@ svg:hover #textcircle{
     .rg__text--mask{
         display: flex;
         justify-content: start;
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         gap: 5px;
     }
-    
-    
-    
+    .rg__text--iconsBox {
+        margin-top: 0;
+    }    
+    .rg__text--buttonBox{
+        margin-top: 1rem;   
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -1890,12 +1898,16 @@ svg:hover #textcircle{
         flex-direction: column;
         gap:20px;
     }
-
+    .contact__form {
+        width: 90%;
+    }    
     .box-info {
         gap:15px;
+        padding-left: 0;
+        width: 90%;
     }
 
     .contact__title {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
 }
