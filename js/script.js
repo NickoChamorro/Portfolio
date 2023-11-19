@@ -227,8 +227,10 @@ function initFirstScrollAnimation(){
     .to('.imageIcon', {left: '3vw', duration: 1}, '=-1')
     .to('.background', {right: rightBackground, duration: 1}, '=-1')
     .addLabel('home')
-    .to('.container__presentation', {scale:3, delay: 1, duration:1.5})
-    .to('.home__title', {x:-100, duration:1.5}, '=-1.5')
+    /* .to('.container__presentation', {scale:3, delay: 1, duration:1.5})
+    .to('.home__title', {x:-100, duration:1.5}, '=-1.5') */
+    .to('.home__title', {scale:2, transform:"rotate(-20deg)", yPercent:-30, delay: 1, duration:1.5})
+    .to('.home__subtitle', {yPercent:300, opacity:0, duration:1.5}, '=-1.5') 
     .from('.container__experience', {yPercent:150}, '-=2')
     .to('.experience__number--second', {left: '0', duration: 1.5},'-=0.5')  
     .to('.experience__number--third', {left: '0', duration: 1.5}, '-=1.5') 
