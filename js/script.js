@@ -7,6 +7,7 @@ const selectAll = (e) => document.querySelectorAll(e);
 
 // define a breakpoint
 const mq = window.matchMedia('(min-width: 768px)');
+const mqLarge = window.matchMedia('(min-width: 1281px)');
 
 // ----------- Cursor -----------
 const cursor = select('.cursor');
@@ -229,7 +230,7 @@ function initFirstScrollAnimation(){
     .addLabel('home')
     /* .to('.container__presentation', {scale:3, delay: 1, duration:1.5})
     .to('.home__title', {x:-100, duration:1.5}, '=-1.5') */
-    .to('.home__title', {scale:2, transform:"rotate(-20deg)", yPercent:-30, delay: 1, duration:1.5})
+    .to('.home__title', {scale:0.2, yPercent:-80, delay: 1, duration:1.5})
     .to('.home__subtitle', {yPercent:300, opacity:0, duration:1.5}, '=-1.5') 
     .from('.container__experience', {yPercent:150}, '-=2')
     .to('.experience__number--second', {left: '0', duration: 1.5},'-=0.5')  
@@ -314,7 +315,7 @@ function initSphereCloud(){
         },
         {
             "id":"FRAMER MOTION",
-            "desc": "Another animation library, a production-ready motion library for React.<br><br>It provides very good results."
+            "desc": "An animation library, a production-ready motion library for React.<br><br>It provides very good results."
         },
         {
             "id":"BOOTSTRAP",
@@ -370,6 +371,8 @@ function initSphereCloud(){
     
     if (!mq.matches){
         radiusSphere = 200
+    } else if (mqLarge.matches){
+        radiusSphere = 320
     }
 
     let tagCloud = TagCloud('.Sphere', Skills, {

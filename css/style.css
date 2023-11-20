@@ -1911,3 +1911,40 @@ svg:hover #textcircle{
         font-size: 2.5rem;
     }
 }
+
+@media only screen and (min-width: 1281px) {
+    :root {
+        /* --f-size-tit: clamp(3.5rem, 12vw, 15rem); */
+        --f-size-subt: 1.5rem;
+        /* --f-size-ter: clamp(1.1rem, 3vw, 1.6rem);
+        --f-size-titPort: clamp(1.5rem, 3vw, 2.7rem); */
+    
+      /*--l-spacing-tit: 1.2rem;
+        --l-spacing-subt: 0.2rem;
+        --l-spacing-ter: 0.2rem;
+    
+        --line-height-tit: 1;
+        --line-height-subt: 1.5;
+        --line-height-ter: 1; */
+    }   
+    .contact__title {
+        font-size: 5.5rem;
+    }    
+
+    .button {
+        height: 4.2rem;
+        width: 4.2rem;
+    }  
+
+    .imageIcon{
+        height: 5rem;
+        width: 5rem;
+    }  
+    
+    .icon__img{
+        height: 7rem;
+        width: 7rem;
+        /* top: -30%;
+        left: -25%; */
+    }    
+}
