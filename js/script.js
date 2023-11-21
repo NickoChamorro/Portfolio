@@ -230,7 +230,7 @@ function initFirstScrollAnimation(){
     .addLabel('home')
     /* .to('.container__presentation', {scale:3, delay: 1, duration:1.5})
     .to('.home__title', {x:-100, duration:1.5}, '=-1.5') */
-    .to('.home__title', {scale:0.2, yPercent:-80, delay: 1, duration:1.5})
+    .to('.home__title', {scale: 0.5, yPercent:-80, delay: 1, transform: "rotateX(-90deg)", duration:1.5}) /* transform: "rotateX(-90deg)", */
     .to('.home__subtitle', {yPercent:300, opacity:0, duration:1.5}, '=-1.5') 
     .from('.container__experience', {yPercent:150}, '-=2')
     .to('.experience__number--second', {left: '0', duration: 1.5},'-=0.5')  
