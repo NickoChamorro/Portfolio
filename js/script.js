@@ -33,6 +33,21 @@ function addHoverCursor(elements, size = 'small'){
     }
 };
 
+function addHoverCursorButtons(elements){
+    for(var i=0;i<elements.length;i++){
+        elements[i].addEventListener("mouseover", (e) => {
+            cursor.style.background = "rgba(1,1,1,0.1)";
+            cursor.style.border = "1px solid grey";
+            cursor.style.mixBlendMode= "normal";
+        });
+        elements[i].addEventListener("mouseout", (e) => {
+            cursor.style.background = "white";
+            cursor.style.border = "none"
+            cursor.style.mixBlendMode= "difference";
+        });
+    }
+};
+
 function changeCursor(action, size = "small") {
     switch (size) {
     case "big":
@@ -71,6 +86,25 @@ addHoverCursor(titlePortfolioElements);
 addHoverCursor(submitFormElements); */
 const titleFormElements=document.getElementsByClassName("contact__title");
 addHoverCursor(titleFormElements, "big");
+
+const buttonContainer = document.getElementsByClassName("button-containerMain");
+addHoverCursor(buttonContainer);
+addHoverCursorButtons(buttonContainer);
+
+const aElements=document.getElementsByTagName("a");
+addHoverCursor(aElements);
+addHoverCursorButtons(aElements);
+
+const imageIcon = document.getElementsByClassName("imageIcon");
+/* addHoverCursor(imageIcon); */
+addHoverCursorButtons(imageIcon);
+
+const buttonMenu = document.getElementsByClassName("button");
+/* addHoverCursor(buttonMenu); */
+addHoverCursorButtons(buttonMenu);
+
+
+
 
 /* document.addEventListener( "DOMContentLoaded", function(){ */
 window.addEventListener( "load", function(){
