@@ -103,7 +103,9 @@ const buttonMenu = document.getElementsByClassName("button");
 /* addHoverCursor(buttonMenu); */
 addHoverCursorButtons(buttonMenu);
 
-
+const Desktop3D = document.getElementsByClassName("Desktop");
+/* addHoverCursor(buttonMenu); */
+addHoverCursorButtons(Desktop3D);
 
 
 /* document.addEventListener( "DOMContentLoaded", function(){ */
@@ -160,6 +162,7 @@ function initContent(){
     initSmoothScroll()
     initFirstScrollAnimation()
     initBackgroundParticle()
+    initAnimationDesktop3D()
     initSphereCloud()
     initPortfolioMarqueeAnimation()
     initPortfolioAnimation()
@@ -271,8 +274,10 @@ function initFirstScrollAnimation(){
     .to('.experience__number--third', {left: '0', duration: 1.5}, '-=1.5') 
     .to('.experience__number--third', {color: '#000', duration: 0.1}) 
     .from('.experience__text', {xPercent: 350, duration: 1.5}, '-=1.5')
-    .from(chars1, {yPercent: chars1YPercent, stagger: 0.02,ease: 'back.out', duration:1.5})
-    .from(chars2, {yPercent: chars2YPercent, stagger: 0.02,ease: 'back.out', duration:1.5}, '-=1')
+    .from(chars1, {yPercent: chars1YPercent, stagger: 0.02,ease: 'back.out', duration:1})
+    .from(chars2, {yPercent: chars2YPercent, stagger: 0.02,ease: 'back.out', duration:1}, '-=0.8')
+    .from('#Desktop', {yPercent: 50, opacity:0, duration: 1}, '-=1')
+    .from('.experience__boxParagraph', {background: 'whitesmoke', duration:2})
     .addLabel('aboutme')
 
     ScrollTrigger.create({
@@ -310,6 +315,22 @@ function initBackgroundParticle(){
                     "remove":{"particles_nb":2}}
         },"retina_detect":true
     }); 
+}
+
+// Desktop model view animation
+function initAnimationDesktop3D(){
+    const modelViewerDesktop = document.querySelector("#Desktop");
+    const orbitCycle = [
+        '20deg 70deg 2.6m',
+        '-20deg 75deg 2.5m',
+        modelViewerDesktop.cameraOrbit
+    ];
+
+    setInterval(() => {
+        const currentOrbitIndex = orbitCycle.indexOf(modelViewerDesktop.cameraOrbit);
+        modelViewerDesktop.cameraOrbit =
+            orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
+    }, 3000);
 }
 
 // ----------- Sphere Cloud Skills -----------

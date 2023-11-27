@@ -911,8 +911,8 @@ svg:hover #textcircle{
     grid-template-areas:
     ". boxYears ."
     ". boxParagraph .";
-    grid-template-columns: 15% 70% 15%;
-    grid-template-rows: 2fr 3fr;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 40% 60%;
     grid-column-gap: 0px;
     grid-row-gap: 0px; 
     place-content: center;
@@ -975,12 +975,23 @@ svg:hover #textcircle{
     grid-area: boxParagraph;
     /* font-size: 1.8rem;
     font-weight: 500; */
+    position: relative;
     display: flex;
-    justify-content: start;
+    /* justify-content: start;
+    align-items: start;
+    flex-flow: column wrap; */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.experience__textBox{
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-evenly;
     align-items: start;
     flex-flow: column wrap;
-    padding-top: 2rem;
-    overflow: hidden;
 }
 
 .experience__splitText{
@@ -995,7 +1006,14 @@ svg:hover #textcircle{
     overflow: hidden;
     padding: 0.7rem 1rem;
     /* text-transform: uppercase; */
+    z-index: 2;
 }
+
+#Desktop{
+    min-width: 300px;
+    min-height: 300px;
+}
+
 
 .space{
     position: relative;
@@ -1808,6 +1826,30 @@ svg:hover #textcircle{
   Media Queries
  ========================================================================== */
 
+ @media screen and (max-width:600px) {
+    .experience__boxParagraph{
+        flex-wrap: wrap;
+    }    
+    .container__contact {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+    .contact__form {
+        width: 90%;
+    }    
+    .box-info {
+        gap:15px;
+        padding-left: 0;
+        width: 90%;
+    }
+
+    .contact__title {
+        font-size: 2.5rem;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     /* Button menu*/
     .button{
@@ -1841,6 +1883,11 @@ svg:hover #textcircle{
     }    
     .experience__splitText{
         padding: 0.7rem 0;
+        padding-right: 1rem;
+    }
+    #Desktop{
+        min-width: 250px;
+        min-height: 250px;
     }
     /* Skill section*/
     .sphereBox{
@@ -1891,24 +1938,13 @@ svg:hover #textcircle{
     }
 }
 
-@media screen and (max-width:600px) {
-    .container__contact {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap:20px;
+@media only screen and (max-width: 780px) {
+    .experience{
+        grid-template-columns: 10% 80% 10%;
     }
-    .contact__form {
-        width: 90%;
-    }    
-    .box-info {
-        gap:15px;
-        padding-left: 0;
-        width: 90%;
-    }
-
-    .contact__title {
-        font-size: 2.5rem;
+    .experience__splitText{
+        padding: 0.7rem 0;
+        padding-right: 1rem;
     }
 }
 
@@ -1948,3 +1984,15 @@ svg:hover #textcircle{
         left: -25%; */
     }    
 }
+
+@media only screen and (min-width: 780px) and (max-width: 860px) {
+    .experience__splitText{
+        padding: 0.7rem 0;
+    }
+}
+/* @media only screen and (min-width: 860px) and (max-width: 1025px) {
+    .experience__splitText{
+        padding-right: 5rem ;
+    }
+} */
+
