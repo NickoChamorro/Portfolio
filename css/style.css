@@ -1,7 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
 @font-face {
     font-family: Dahlia;
     src: url('../fonts/Dahlia/dahlia-regular.otf');
@@ -11,17 +7,6 @@
 @font-face {
     font-family: Dahlia;
     src: url('../fonts/Dahlia/dahlia-bold.otf');
-    font-style: bold;
-}
-
-@font-face {
-    font-family: Montag;
-    src: url('../fonts/Archive/Montag\ W01\ Regular.ttf');
-    font-style: normal;
-}
-@font-face {
-    font-family: Montag;
-    src: url('../fonts/Archive/Montag\ W01\ Bold.ttf');
     font-style: bold;
 }
 
@@ -143,98 +128,7 @@ body{
   cursor: progress;
 }
 
-.loader, .loader__content {
-    min-height: 100vh;
-    position: fixed;
-    flex-direction: column;
-    z-index: 4;
-    top: 0;
-    left: 0;
-    width: 100%;
-    visibility: hidden;
-    overflow: hidden;
-}
-.loader__mask {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background: var(--bcg-dark) url('../img/img_logo.svg') no-repeat center;
-    background-size: 155px 155px;
-    overflow: hidden;
-}
-.loader .inner,
-.loader__content .inner {
-    width: var(--loader-width);
-    height: var(--loader-height);
-}
-.loader .inner {
-    background-color: var(--bcg-greyLight); 
-    position: relative;
-}
-.loader .progress {
-    background-color: var(--bcg-lightSmoke);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: var(--loader-width);
-    height: var(--loader-height);
-}
-.loader__content {
-    z-index: 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    visibility: hidden; 
-}
-.loader__title {
-    font-size: 7vw;
-    line-height: 8vw;
-    margin: 0;
-    font-family: var(--text-family-primary);
-    color: var(--text-color);
-    -webkit-text-stroke: 1px var(--text-dark-color);
-    font-weight: normal;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5;
-}
-.loader__image {
-    width: var(--loader-width);
-    padding-bottom: 50vh;
-    overflow: hidden;
-    position: relative;
-}
-
-#video-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    min-width: 100%;
-    background-position: center center;
-    background-size: cover;
-    object-fit: cover;
-}
-
-.loader__title--mask {
-    overflow: hidden;
-}
-.loader__title--mask span {
-    display: block;
-}
-.loader__image--mask {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-} */
-
+*/
 
 .loading-screen{
     position: fixed;
@@ -743,23 +637,6 @@ svg:hover #textcircle{
     /* z-index: 2; */
 }
 
-.homeBackground{
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: calc(100% + 50px);
-    height: calc(100% + 50px);
-    background: repeating-linear-gradient(#111,#111 50%,rgb(57, 55, 55) 50%, rgb(57, 55, 55));
-    background-size: 5px 5px;
-    filter: url(#noise);
-    z-index: 1;
-}
-
-.homeSvg{
-    width: 0;
-    height: 0;
-}
-
 .home{
     position: relative; 
     height: 100%;
@@ -800,24 +677,6 @@ svg:hover #textcircle{
     margin-bottom: 0;
 }
 
-/* .home__text{
-    display: block;
-} */
-
-/* .home__text--name{
-    position: relative;
-    width: 23vw;
-    height: 10vw;
-    z-index: 3;
-}
-
-.home__text--surname{
-    position: relative;
-    width: 23vw;
-    height: 10vw;
-    z-index: 5;
-} */
-
 .home__subtitle {
     position: relative;
     color: var(--text-color);
@@ -831,42 +690,6 @@ svg:hover #textcircle{
     margin-top: 2rem;
     opacity: 1;
     z-index: 5;
-}
-
-.home__img {
-    position: relative;
-    max-width: 90vw;
-    max-height: 612px;
-    object-fit: cover;
-    opacity: 1;
-    z-index: 4; 
-}
-
-.home__decorCircle {
-    position: absolute;
-    width: clamp(15rem,40vw,17rem);
-    height: clamp(15rem,40vw,17rem);
-    /* top: clamp(-60%,40vw,-40%);
-    left: clamp(40%,40vw,70%); */
-    top:-25%;
-    right: 5%;
-    border: 2px var(--bcg-grey) solid;
-    border-radius: 100%;
-    opacity: 0.8;
-    pointer-events: none;
-    z-index: 2;
-    overflow: hidden;
-}
-
-.home__image{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-image: url("../img/Profile-pic_BlackAndWhite_Cuadrada-SinFondo.png");
-    background-position: center; 
-    background-size : 17rem 17rem;
-    background-repeat : no-repeat;
-    z-index: 3;
 }
 
 /* About Me Section */
@@ -1296,61 +1119,6 @@ svg:hover #textcircle{
     margin-top: 2rem;
 }
 
-/* .rg__text--button {
-    position: relative;
-    display: inline-block;
-    background: var(--bcg-light); 
-    color: var(--text-dark-color); 
-    border: 2px solid var(--bcg-dark); 
-    width: 110px;
-    padding: 10px 0;
-    border-radius: 30px; 
-    text-align: center;
-    text-decoration: none;   
-    font-size: 0.7rem;
-    font-weight: bold;
-    overflow: hidden;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-
-.rg__text--button:hover {
-    color: var(--text-color);
-    letter-spacing: 0.2rem;
-}
-
-.rg__text--button::after {
-    content: "";
-    background: var(--bcg-dark); 
-    position: absolute;
-    z-index: -1;
-    padding: 12px 16px;
-    display: block;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    transform: scale(0, 0) rotate(-180deg);
-    transition: all 0.3s ease;
-}
-
-.rg__text--button:hover::after {
-    transition: all 0.3s ease-out;
-    transform: scale(1, 1) rotate(0deg);
-}
-
-.rg__text--buttonDouble{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.2rem;
-    padding: 4px 0;
-}
-
-.rg__text--button i {
-    font-size: 25px;
-} */
-
 .rg__text--button { 
     width: 101%;
     height: 105%;
@@ -1641,43 +1409,6 @@ svg:hover #textcircle{
 .input-box > input:focus ~ i {
     color:var(--text-color);
 }
-/*
-.form__button {
-    background: black; 
-    color: var(--text-color); 
-    border: 2px solid var(--bcg-light); 
-    padding: 16px 20px;
-    border-radius: 30px; 
-    position: relative;
-    z-index: 1;
-    font-size: 1rem;
-    overflow: hidden;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-.form__button:hover {
-    color: var(--text-dark-color);
-    letter-spacing: 0.2rem;
-}
-.form__button::after {
-    content: "";
-    background: var(--bcg-light); 
-    position: absolute;
-    z-index: -1;
-    padding: 16px 20px;
-    display: block;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    transform: scale(0, 0) rotate(-180deg);
-    transition: all 0.3s ease;
-}
-.form__button:hover::after {
-    transition: all 0.3s ease-out;
-    transform: scale(1, 1) rotate(0deg);
-}
-*/
 
 .button-containerMain {
     position: relative;
@@ -1812,7 +1543,20 @@ svg:hover #textcircle{
     0%, 100% {transform: translateX(0);} 
     10%,  50%,  90% {transform: translateX(-3px);} 
     25%,  75% {transform: translateX(3px);} 
- }
+}
+
+footer{
+    position: fixed;
+    width: 100dvw;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--bcg-lightSmoke);
+    padding: 0.8rem 0;
+    font-size: 0.8rem;
+}
 
 .firma{
     margin-top: 1rem;
@@ -1936,6 +1680,9 @@ svg:hover #textcircle{
     .rg__text--buttonBox{
         margin-top: 1rem;   
     }
+    footer{
+        font-size: 0.5rem;
+    }
 }
 
 @media only screen and (max-width: 780px) {
@@ -1950,18 +1697,7 @@ svg:hover #textcircle{
 
 @media only screen and (min-width: 1281px) {
     :root {
-        /* --f-size-tit: clamp(3.5rem, 12vw, 15rem); */
         --f-size-subt: 1.5rem;
-        /* --f-size-ter: clamp(1.1rem, 3vw, 1.6rem);
-        --f-size-titPort: clamp(1.5rem, 3vw, 2.7rem); */
-    
-      /*--l-spacing-tit: 1.2rem;
-        --l-spacing-subt: 0.2rem;
-        --l-spacing-ter: 0.2rem;
-    
-        --line-height-tit: 1;
-        --line-height-subt: 1.5;
-        --line-height-ter: 1; */
     }   
     .contact__title {
         font-size: 5.5rem;
@@ -1990,9 +1726,5 @@ svg:hover #textcircle{
         padding: 0.7rem 0;
     }
 }
-/* @media only screen and (min-width: 860px) and (max-width: 1025px) {
-    .experience__splitText{
-        padding-right: 5rem ;
-    }
-} */
+
 
