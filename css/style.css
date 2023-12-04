@@ -1695,6 +1695,12 @@ footer{
     }
 }
 
+@media only screen and (min-width: 780px) and (max-width: 860px) {
+    .experience__splitText{
+        padding: 0.7rem 0;
+    }
+}
+
 @media only screen and (min-width: 1281px) {
     :root {
         --f-size-subt: 1.5rem;
@@ -1721,10 +1727,14 @@ footer{
     }    
 }
 
-@media only screen and (min-width: 780px) and (max-width: 860px) {
-    .experience__splitText{
-        padding: 0.7rem 0;
+@media only screen and (min-width: 1440px) {
+    #Desktop{
+        min-width: 400px;
+        min-height: 400px;
     }
-}
+    .tagcloud {
+        font-size: 1.2rem;
+    }    
+}   
 
 
