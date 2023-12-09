@@ -107,7 +107,6 @@ const Desktop3D = document.getElementsByClassName("Desktop");
 /* addHoverCursor(buttonMenu); */
 addHoverCursorButtons(Desktop3D);
 
-
 /* document.addEventListener( "DOMContentLoaded", function(){ */
 window.addEventListener( "load", function(){
     const counter3 = select('.counter-3')
@@ -171,13 +170,13 @@ function initContent(){
     initNavMenu()
 };
 
-// Controladores modelos 3D
+/* // Controladores modelos 3D
 const modelViewerTransformSunglasses = select("#Sunglasses");
 let rollSunglasses = 1, pitchSunglasses = 1, yawSunglasses = 90;
 
 const updateOrientation = (modelViewerTransform,roll,pitch,yaw) => {
     modelViewerTransform.orientation = `${roll}deg ${pitch}deg ${yaw}deg`;
-};
+}; */
 
 // ----------- Smooth Scroll -----------
 function initSmoothScroll(){
@@ -267,7 +266,7 @@ function initFirstScrollAnimation(){
     .addLabel('home')
     /* .to('.container__presentation', {scale:3, delay: 1, duration:1.5})
     .to('.home__title', {x:-100, duration:1.5}, '=-1.5') */
-    .to('.home__title', {scale: 0.5, yPercent:-80, delay: 1, transform: "rotateX(-90deg)", duration:1.5}) /* transform: "rotateX(-90deg)", */
+    .to('.home__title', {scale: 0.5, yPercent:-80, delay: 1, transform: "rotateX(-90deg)", opacity: 0, duration:1.5}) /* transform: "rotateX(-90deg)", */
     .to('.home__subtitle', {yPercent:300, opacity:0, duration:1.5}, '=-1.5') 
     .from('.container__experience', {yPercent:150}, '-=2')
     .to('.experience__number--second', {left: '0', duration: 1.5},'-=0.5')  
@@ -346,79 +345,79 @@ function initSphereCloud(){
     const DescriptionSkills = [
         {
             "id":"HTML",
-            "desc": "Hyper Text Markup Language, is the standard markup language for creating web pages.<br><br>Is it a language or not? What I know is that it is the basis of web pages."
+            "desc": "Hyper Text Markup Language, is the <b>standard markup language</b> for creating web pages.<br><br>Is it a language or not? What I know is that it is <b>the basis</b> of <b>web pages</b>."
         },
         {
             "id":"CSS",
-            "desc": "Cascading Style Sheets, is used to define styles for your web pages.<br><br>In my view that's where the magic of web pages begins."
+            "desc": "Cascading Style Sheets, is used to define <b>styles</b> for your <b>web pages</b>.<br><br>In my view, that's where <b>the magic</b> of web pages begins."
         },
         {
             "id":"JAVASCRIPT",
-            "desc": "JS is a dynamic programming language used for web development, game development and more.<br><br>It allows you to implement dynamic features that cannot be done with only HTML and CSS."
+            "desc": "JS is a <b>dynamic programming language</b> used for web development, game development and more.<br><br>It allows you to implement <b>dynamic features</b> that cannot be done with only HTML and CSS."
         },
         {
             "id":"REACT",
-            "desc": "Popular open-source JavaScript library.<br><br>Created by Facebook, React contains a collection of reusable JS code snippets used to create user interfaces called components."
+            "desc": "Popular <b>open-source JavaScript library</b>.<br><br>Created by Facebook, React contains a collection of <b>reusable JS code snippets</b> used to create user interfaces called <b>components</b>."
         },
         {
             "id":"STYLED COMPONENTS",
-            "desc": "Allows you to write CSS code inside a Javascript function, you can create custom styling components.<br><br>It is my favorite for styling with React."
+            "desc": "Allows you to write <b>CSS</b> code <b>inside a Javascript function</b>, you can create custom styling components.<br><br>It is my favorite for <b>styling</b> with React."
         },
         {
             "id":"GSAP",
-            "desc": "Robust Javascript library that allows us to create timeline-based animations with great precision and reliability.<br><br>Professional animations, on another level, with high performance."
+            "desc": "Robust <b>Javascript library</b> that allows us to create <b>timeline-based animations</b> with great precision and reliability.<br><br><b>Professional animations</b>, on another level, with <b>high performance</b>."
         },
         {
             "id":"FRAMER MOTION",
-            "desc": "An animation library, a production-ready motion library for React.<br><br>It provides very good results."
+            "desc": "An <b>animation library</b>, a production-ready motion <b>library</b> for React.<br><br>It delivers excellent outcomes."
         },
         {
             "id":"BOOTSTRAP",
-            "desc": "Cross-platform library or open source toolset for website and web application design.<br><br>It provides us with functionalities using its classes in our HTML."
+            "desc": "<b>Cross-platform</b> library or open source <b>toolset</b> for website and web application design.<br><br>It empowers us with functionalities through its <b>classes integrated</b> into our HTML."
         },
         {
             "id":"SASS",
-            "desc": "It is a CSS preprocessor, a tool that adds features of programming languages to CSS.<br><br>It allows to have a modular organization of styles."
+            "desc": "It serves as a <b>CSS preprocessor</b>, a tool that incorporates programming language features into CSS.<br><br>It allows to have a <b>modular organization</b> of styles."
         },
         {
             "id":"JSON",
-            "desc": "JavaScript Object Notation. JSON is a lightweight format for storing and transporting data.<br><br>JSON is often used when data is sent from a server to a web page."
+            "desc": "JavaScript Object Notation. JSON is a lightweight <b>format</b> for storing and transporting <b>data</b>.<br><br>It's common to use JSON when <b>sending data</b> from a server to a web page."
         },
         {
             "id":"REDUX",
-            "desc": "Open source JavaScript library for application state management, commonly used with React.<br><br>It easily monitors the status of our web applications."
+            "desc": "Open source JavaScript library for <b>application state management</b>, commonly used with React.<br><br>It easily monitors the <b>status</b> of our web applications."
         },
         {
             "id":"REACT NATIVE",
-            "desc": "React Native is a React JS-based framework to design mobile apps, both Android and iOS.<br><br>The difference with React is that instead of a web application, what you get is a real native application."
+            "desc": "React Native is a React JS-based framework to design <b>mobile apps</b>, both Android and iOS.<br><br>The difference with React is that instead of a web application, what you get is a <b>real native application</b>."
         },
         {
             "id":"EXPO",
-            "desc": "Expo is a set of tools, libraries and services you can use to simplify your React Native code.<br><br>It is very useful and recommended."
+            "desc": "Expo is a set of <b>tools</b>, <b>libraries</b> and <b>services</b> you can use to simplify your <b>React Native code</b>.<br><br>Highly valuable and recommended without reservation."
         },
         {
             "id":"TYPESCRIPT",
-            "desc": "Superset of JavaScript that adds optional static typing and advanced features to JavaScript.<br><br>Improves code understanding and highlights errors in the development instance."
+            "desc": "<b>Superset of JavaScript</b> that adds optional static typing and advanced features to JavaScript.<br><br>Improves <b>code understanding</b> and <b>highlights errors</b> in the development instance."
         },
         {
             "id":"GIT",
-            "desc": "Git is a distributed version control software, designed for applications or web pages with a large number of source code files.<br><br>It also allows you to have a backup copy."
+            "desc": "Git is a <b>distributed version control software</b>, designed for applications or web pages with a large number of source code files.<br><br>Additionally, it provides the option to have a <b>backup copy</b>."
         },
         {
             "id":"GITHUB",
-            "desc": "GitHub is a code hosting platform for version control and collaboration using Git.<br><br>It lets you and others work together on projects from anywhere."
+            "desc": "GitHub serves as a <b>platform for hosting code</b>, facilitating version control and collaboration, through the use of Git.<br><br>It allows you and collaborators to work on <b>the same projects</b> regardless of your location."
         },
         {
             "id":"MYSQL",
-            "desc": "MySQL is a relational database management system.<br><br>It is one of the most used, in my case I use it both in my work and in the practices in courses."
+            "desc": "MYSQL serves as a <b>relational database management system</b>.<br><br>It ranks as one of <b>the most commonly employed tools</b>, I utilize it both in my professional duties and practical coursework."
         },
         {
             "id":"MSSQL",
-            "desc": "Microsoft SQL Server is a relational database management system developed by Microsoft.<br><br>With good features but paid versions."
+            "desc": "Developed by Microsoft, Microsoft SQL Server stands as a <b>relational database management system</b>.<br><br>Equipped with <b>excellent features</b>, but paid versions."
         },
         {
             "id":"FIREBASE",
-            "desc": "Google platform for web and mobile application development.<br><br>It provides complementary backend services, such as real-time database, user authentication, cloud messaging."
+            "desc": "<b>Google platform</b> for web and mobile application development.<br><br>It provides complementary <b>backend services</b>, such as real-time database, user authentication, cloud messaging."
         }
     ]
 
@@ -470,7 +469,7 @@ function initSphereCloud(){
             if (e.target.className === 'tagcloud--item') {
                 tagCloud.resume();
                 skillTitle.innerHTML = "Technologies"
-                skillText.innerHTML = "Select each one to get more information."
+                skillText.innerHTML = "Select each one to get <b>more information</b>."
             }
         }); 
     }    
@@ -721,19 +720,31 @@ function initNavMenu(){
 
     const allLinksMenu = selectAll('.nav__link');
 
+    const buttonNavMenu = select('.button');
+    const checkboxNav = select('.checkbox');
+    const textButtonMenu = select('.button__textpath'); 
+
+    buttonNavMenu.addEventListener("click", (e) => {
+        if (checkboxNav.checked === false){
+            textButtonMenu.innerHTML = "GO&nbsp;BACK&nbsp;♦&nbsp;GO&nbsp;BACK&nbsp;♦&nbsp;"; /* "&nbsp;GO&nbsp;♦&nbsp;BACK&nbsp;♦&nbsp;" */
+        }else{
+            textButtonMenu.innerHTML = "MENU&nbsp;♦&nbsp;MENU&nbsp;♦&nbsp;";
+        }
+    }); 
+
     allLinksMenu.forEach((link, index) => {
         link.addEventListener("click", (e) => {
             let scrollPosition = proccessDataScroll(e.target.innerHTML)
             scrollToLabel(0.1, scrollPosition.tl, scrollPosition.label);
             
-            let inputNav = select('.checkbox');
-            inputNav.checked = false;
+            checkboxNav.checked = false;
+            textButtonMenu.innerHTML = "MENU&nbsp;♦&nbsp;MENU&nbsp;♦&nbsp;";
         })
     })  
 
-    const imageIcon = select('.imageIcon');
+    const imageLogoIcon = select('.imageIcon');
 
-    imageIcon.addEventListener("click", (e) => {
+    imageLogoIcon.addEventListener("click", (e) => {
         scrollToLabel(1.2, tl, "initial");
     });
 
