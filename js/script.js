@@ -745,7 +745,7 @@ function initNavMenu(){
     const imageLogoIcon = select('.imageIcon');
 
     imageLogoIcon.addEventListener("click", (e) => {
-        scrollToLabel(1.2, tl, "initial");
+        scrollToLabel(1.2, tl, "home"); // "initial"
     });
 
     function scrollToLabel(duration, timeline, label) {   
