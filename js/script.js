@@ -345,79 +345,79 @@ function initSphereCloud(){
     const DescriptionSkills = [
         {
             "id":"HTML",
-            "desc": "Hyper Text Markup Language, is the <b>standard markup language</b> for creating web pages.<br><br>Is it a language or not? What I know is that it is <b>the basis</b> of <b>web pages</b>."
+            "desc": "Hyper Text Markup Language, is the <span class='text-bold'>standard markup language</span> for creating web pages.<br><br>Is it a language or not? What I know is that it is <span class='text-bold'>the basis</span> of <span class='text-bold'>web pages</span>."
         },
         {
             "id":"CSS",
-            "desc": "Cascading Style Sheets, is used to define <b>styles</b> for your <b>web pages</b>.<br><br>In my view, that's where <b>the magic</b> of web pages begins."
+            "desc": "Cascading Style Sheets, is used to define <span class='text-bold'>styles</span> for your <span class='text-bold'>web pages</span>.<br><br>In my view, that's where <span class='text-bold'>the magic</span> of web pages begins."
         },
         {
             "id":"JAVASCRIPT",
-            "desc": "JS is a <b>dynamic programming language</b> used for web development, game development and more.<br><br>It allows you to implement <b>dynamic features</b> that cannot be done with only HTML and CSS."
+            "desc": "JS is a <span class='text-bold'>dynamic programming language</span> used for web development, game development and more.<br><br>It allows you to implement <span class='text-bold'>dynamic features</span> that cannot be done with only HTML and CSS."
         },
         {
             "id":"REACT",
-            "desc": "Popular <b>open-source JavaScript library</b>.<br><br>Created by Facebook, React contains a collection of <b>reusable JS code snippets</b> used to create user interfaces called <b>components</b>."
+            "desc": "Popular <span class='text-bold'>open-source JavaScript library</span>.<br><br>Created by Facebook, React contains a collection of <span class='text-bold'>reusable JS code snippets</span> used to create user interfaces called <span class='text-bold'>components</span>."
         },
         {
             "id":"STYLED COMPONENTS",
-            "desc": "Allows you to write <b>CSS</b> code <b>inside a Javascript function</b>, you can create custom styling components.<br><br>It is my favorite for <b>styling</b> with React."
+            "desc": "Allows you to write <span class='text-bold'>CSS</span> code <span class='text-bold'>inside a Javascript function</span>, you can create custom styling components.<br><br>It is my favorite for <span class='text-bold'>styling</span> with React."
         },
         {
             "id":"GSAP",
-            "desc": "Robust <b>Javascript library</b> that allows us to create <b>timeline-based animations</b> with great precision and reliability.<br><br><b>Professional animations</b>, on another level, with <b>high performance</b>."
+            "desc": "Robust <span class='text-bold'>Javascript library</span> that allows us to create <span class='text-bold'>timeline-based animations</span> with great precision and reliability.<br><br><span class='text-bold'>Professional animations</span>, on another level, with <span class='text-bold'>high performance</span>."
         },
         {
             "id":"FRAMER MOTION",
-            "desc": "An <b>animation library</b>, a production-ready motion <b>library</b> for React.<br><br>It delivers excellent outcomes."
+            "desc": "An <span class='text-bold'>animation library</span>, a production-ready motion <span class='text-bold'>library</span> for React.<br><br>It delivers excellent outcomes."
         },
         {
             "id":"BOOTSTRAP",
-            "desc": "<b>Cross-platform</b> library or open source <b>toolset</b> for website and web application design.<br><br>It empowers us with functionalities through its <b>classes integrated</b> into our HTML."
+            "desc": "<span class='text-bold'>Cross-platform</span> library or open source <span class='text-bold'>toolset</span> for website and web application design.<br><br>It empowers us with functionalities through its <span class='text-bold'>classes integrated</span> into our HTML."
         },
         {
             "id":"SASS",
-            "desc": "It serves as a <b>CSS preprocessor</b>, a tool that incorporates programming language features into CSS.<br><br>It allows to have a <b>modular organization</b> of styles."
+            "desc": "It serves as a <span class='text-bold'>CSS preprocessor</span>, a tool that incorporates programming language features into CSS.<br><br>It allows to have a <span class='text-bold'>modular organization</span> of styles."
         },
         {
             "id":"JSON",
-            "desc": "JavaScript Object Notation. JSON is a lightweight <b>format</b> for storing and transporting <b>data</b>.<br><br>It's common to use JSON when <b>sending data</b> from a server to a web page."
+            "desc": "JavaScript Object Notation. JSON is a lightweight <span class='text-bold'>format</span> for storing and transporting <span class='text-bold'>data</span>.<br><br>It's common to use JSON when <span class='text-bold'>sending data</span> from a server to a web page."
         },
         {
             "id":"REDUX",
-            "desc": "Open source JavaScript library for <b>application state management</b>, commonly used with React.<br><br>It easily monitors the <b>status</b> of our web applications."
+            "desc": "Open source JavaScript library for <span class='text-bold'>application state management</span>, commonly used with React.<br><br>It easily monitors the <span class='text-bold'>status</span> of our web applications."
         },
         {
             "id":"REACT NATIVE",
-            "desc": "React Native is a React JS-based framework to design <b>mobile apps</b>, both Android and iOS.<br><br>The difference with React is that instead of a web application, what you get is a <b>real native application</b>."
+            "desc": "React Native is a React JS-based framework to design <span class='text-bold'>mobile apps</span>, both Android and iOS.<br><br>The difference with React is that instead of a web application, what you get is a <span class='text-bold'>real native application</span>."
         },
         {
             "id":"EXPO",
-            "desc": "Expo is a set of <b>tools</b>, <b>libraries</b> and <b>services</b> you can use to simplify your <b>React Native code</b>.<br><br>Highly valuable and recommended without reservation."
+            "desc": "Expo is a set of <span class='text-bold'>tools</span>, <span class='text-bold'>libraries</span> and <span class='text-bold'>services</span> you can use to simplify your <span class='text-bold'>React Native code</span>.<br><br>Highly valuable and recommended without reservation."
         },
         {
             "id":"TYPESCRIPT",
-            "desc": "<b>Superset of JavaScript</b> that adds optional static typing and advanced features to JavaScript.<br><br>Improves <b>code understanding</b> and <b>highlights errors</b> in the development instance."
+            "desc": "<span class='text-bold'>Superset of JavaScript</span> that adds optional static typing and advanced features to JavaScript.<br><br>Improves <span class='text-bold'>code understanding</span> and <span class='text-bold'>highlights errors</span> in the development instance."
         },
         {
             "id":"GIT",
-            "desc": "Git is a <b>distributed version control software</b>, designed for applications or web pages with a large number of source code files.<br><br>Additionally, it provides the option to have a <b>backup copy</b>."
+            "desc": "Git is a <span class='text-bold'>distributed version control software</span>, designed for applications or web pages with a large number of source code files.<br><br>Additionally, it provides the option to have a <span class='text-bold'>backup copy</span>."
         },
         {
             "id":"GITHUB",
-            "desc": "GitHub serves as a <b>platform for hosting code</b>, facilitating version control and collaboration, through the use of Git.<br><br>It allows you and collaborators to work on <b>the same projects</b> regardless of your location."
+            "desc": "GitHub serves as a <span class='text-bold'>platform for hosting code</span>, facilitating version control and collaboration, through the use of Git.<br><br>It allows you and collaborators to work on <span class='text-bold'>the same projects</span> regardless of your location."
         },
         {
             "id":"MYSQL",
-            "desc": "MYSQL serves as a <b>relational database management system</b>.<br><br>It ranks as one of <b>the most commonly employed tools</b>, I utilize it both in my professional duties and practical coursework."
+            "desc": "MYSQL serves as a <span class='text-bold'>relational database management system</span>.<br><br>It ranks as one of <span class='text-bold'>the most commonly employed tools</span>, I utilize it both in my professional duties and practical coursework."
         },
         {
             "id":"MSSQL",
-            "desc": "Developed by Microsoft, Microsoft SQL Server stands as a <b>relational database management system</b>.<br><br>Equipped with <b>excellent features</b>, but paid versions."
+            "desc": "Developed by Microsoft, Microsoft SQL Server stands as a <span class='text-bold'>relational database management system</span>.<br><br>Equipped with <span class='text-bold'>excellent features</span>, but paid versions."
         },
         {
             "id":"FIREBASE",
-            "desc": "<b>Google platform</b> for web and mobile application development.<br><br>It provides complementary <b>backend services</b>, such as real-time database, user authentication, cloud messaging."
+            "desc": "<span class='text-bold'>Google platform</span> for web and mobile application development.<br><br>It provides complementary <span class='text-bold'>backend services</span>, such as real-time database, user authentication, cloud messaging."
         }
     ]
 
@@ -468,8 +468,8 @@ function initSphereCloud(){
         sphereBox.addEventListener('mouseout', function clickEventHandler(e) {
             if (e.target.className === 'tagcloud--item') {
                 tagCloud.resume();
-                skillTitle.innerHTML = "Technologies"
-                skillText.innerHTML = "Select each one to get <b>more information</b>."
+                skillTitle.innerHTML = "TECHNOLOGIES"
+                skillText.innerHTML = "Select each one to get <span class='text-bold'>more information</span>."
             }
         }); 
     }    

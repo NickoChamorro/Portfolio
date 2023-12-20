@@ -13,13 +13,31 @@
 @font-face {
     font-family: RightGroteskSpacial;
     src: url('../fonts/PP-Right-Grotesk/Display/PPRightGrotesk-SpatialFine.otf'); /* Display/PPRightGrotesk-SpatialFine.otf */ /* Text/PPRightGroteskText-Regular.otf */
-    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: RightGroteskSpacial;
+    src: url('../fonts/PP-Right-Grotesk/Display/PPRightGrotesk-SpatialBlack.otf');
+    font-weight: bold;
 }
 
 @font-face {
     font-family: RightGroteskWide;
     src: url('../fonts/PP-Right-Grotesk/Display/PPRightGrotesk-WideMedium.otf');
     font-style: medium;
+}
+
+@font-face {
+    font-family: RightFragment;
+    src: url('../fonts/PP-Fragment/otf/PPFragment-SansRegular.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: RightFragment;
+    src: url('../fonts/PP-Fragment/otf/PPFragment-SansExtraBold.otf');
+    font-weight: bold;
 }
 
 :root {
@@ -30,7 +48,7 @@
     --text-greyDark: rgb(68, 67, 67);
     
     --text-family-primary: Dahlia;
-    --text-family-secondary: RightGroteskSpacial;
+    --text-family-secondary: RightFragment; /* RightGroteskSpacial; */ /* RightGroteskMono; */ 
     --text-family-tertiary: RightGroteskWide;
   
     --bcg-light: white;
@@ -311,8 +329,8 @@ svg:hover #textcircle{
 .nav__link::before{
     content: attr(data-text);
     position: absolute;
-    top: -40%;
-    bottom: 40%;
+    top: -50%;
+    bottom: 50%;
     left: 0;
     /* background-color: red; */
     /* width: 100%; */
@@ -340,7 +358,7 @@ svg:hover #textcircle{
 
 /* functionality */
 .checkbox:checked ~ .background {
-    transform: scale(80); /*90*/
+    transform: scale(85); /*90*/
     overflow: hidden;
 }
 .checkbox:checked ~ .nav {
@@ -465,6 +483,10 @@ svg:hover #textcircle{
 }
 
 /* General */
+.text-bold{
+    font-weight: bold;
+}
+
 .section, .sectionFinal{
     position: relative;
     width: 100%;
